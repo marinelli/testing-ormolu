@@ -1,0 +1,21 @@
+cabal-version: 3.0
+name:          one
+version:       0.1.0.0
+license:
+build-type:    Simple
+
+common commons
+  default-language:   Haskell2010
+  default-extensions: OverloadedLabels
+
+library
+  import:          commons
+  hs-source-dirs:  src
+  build-depends:   base
+  exposed-modules: One
+
+executable exe
+  import:         commons
+  hs-source-dirs: two/app
+  build-depends:  base
+  main-is:        Main.hs
